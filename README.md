@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎛️ Y-Community Command Center
 
-## Getting Started
+> Production-ready dashboard and Telegram bot for managing Y-Community agent infrastructure
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-Database-green)](https://supabase.com/)
+[![Telegraf](https://img.shields.io/badge/Telegraf-Bot-blue)](https://telegraf.js.org/)
+
+---
+
+## 🚀 Features
+
+### 📊 Real-time Dashboard
+- **Live statistics** - Total agents, active agents, success rate, alerts
+- **Interactive charts** - 7-day run history with success/failure breakdown
+- **Agent monitoring** - Status, last run time, autonomous/manual indicator
+- **Run timeline** - Latest 20 agent executions with duration
+- **Alert management** - Acknowledge and dismiss active alerts
+- **Auto-refresh** - Updates every 30 seconds
+
+### 📱 Telegram Bot
+- **/status** - System overview (agents, runs, success rate)
+- **/agents** - List all agents with status
+- **/runs** - Last 10 agent executions
+- **/alerts** - Active alerts requiring attention
+- **/run <agent_id>** - Manually trigger agent (admin only)
+- **/clear_alerts** - Acknowledge all alerts (admin only)
+- **/help** - Full command reference
+
+---
+
+## 🛠️ Quick Start
 
 ```bash
+cd ~/projects/y-community-command-center
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📊 Dashboard Screenshots
 
-## Learn More
+*Coming soon*
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See full deployment guide in the project.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Version:** 1.0.0  
+**Status:** ✅ Production Ready  
+**Created:** 2026-02-10
