@@ -21,11 +21,27 @@ export default function DashboardPage() {
   async function fetchStats() {
     try {
       const response = await fetch('/api/stats');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
       setStats(data);
+      setLoading(false);
     } catch (error) {
       console.error('Error fetching stats:', error);
-    } finally {
+      // Set default stats to unblock UI
+      setStats({
+        totalAgents: 0,
+        activeAgents: 0,
+        totalRuns: 0,
+        successfulRuns: 0,
+        failedRuns: 0,
+        successRate: 0,
+        avgDuration: 0,
+        activeAlerts: 0,
+        chartData: [],
+        lastUpdate: new Date().toISOString()
+      });
       setLoading(false);
     }
   }
